@@ -1,0 +1,101 @@
+
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,lengend,button,input,textarea,th,td,form{margin:0px;padding:0px;}
+BODY{FONT-SIZE:16px; color:#666; font-family:"\5FAE\8F6F\96C5\9ED1", Helvetica; background:#ededed }
+TABLE{PADDING-RIGHT:0;PADDING-LEFT:0;PADDING-BOTTOM:0;MARGIN:0;PADDING-TOP:0;}
+TD{FONT-SIZE:12px;COLOR:#333;}
+TH{FONT-SIZE:12px;COLOR:#333;}
+UL{LIST-STYLE-TYPE:none;}
+#wraper{width:100%; float:left; height:100%;  padding:0px; margin:0px; text-align:center;
+background:url(../images/banner.jpg) bottom ;
+filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+-moz-background-size:100% 100%;  
+    background-size:100% 100%;  }
+.login_header{width:100%; height:98px; float:left;  }
+.login_content{width:100%; height:540px; float:left; 
+ }
+.login_logo{ margin-top:20px;float: left; padding-left:40px;}
+.login_rok{margin-top:100px}
+.triggle{margin-top:-18px;}
+.login_content ul{width:90%;  float: left; margin-left: 10%; margin-right: 5%;color: #fff; margin-top:82px   }
+.login_content li{ margin-top:0px; width:100%; float:left; text-align: left;  }
+.login_content li *{vertical-align: middle;}
+.lan_content{width:35%; float:right; height:24px;  text-align:left; margin-top:10px}
+.ln_select{ border:1px #ddd solid; width:110px; height:28px; color:#666}
+.login_content .logintitle{font-size:20px;  width:100%; text-align:center; float:left; font-weight:600}
+.login_title{width: 100%; float: left; margin-top:20px;}
+
+.login_panel::before{
+            content:"";
+            /*-webkit-filter: opacity(50%);  
+            filter: opacity(50%); */
+            
+            opacity:0.5;//透明度设置
+            z-index:-1;
+            background-size:500px 300px;
+            width:500px; 
+            height:300px;
+            //一定要设置position:absolute,这样才能设置z-index，让背景处于内容的下一层
+            top:0px;
+            left:0px;
+            border-radius:40px;
+}
+.login_panel{
+            position:fixed;
+            left:50%;
+            top:250px;
+            width:500px;
+            height:300px;
+            margin-left:-250px;
+            border-radius:40px;
+            box-shadow: 10px 10px 5px #888;
+            border:1px solid #666;
+            text-align:center;
+}
+.login_content ul li label{float: left; width: 70px;}
+.login_content ul input{width:280px; height:32px; border:1px #fff solid;  border-radius:6px; background: #fff; text-indent: 6px;float: left;  }
+.login_content ul input.code{width: 80px;}
+.login_content ul  li .wrong_code{color: #ff2400;font-size: 12px}
+.login_content ul  li .codeimg{height: 32px; border-radius: 4px; margin-left: 10px}
+.login_content ul  li .remember{width: 18px; height: 18px; margin-top: 10px; margin-right: 5px}
+.login_content ul  li.submitline{margin-top: 10px}
+.login_content .loginBtn{width:164px;   color:#fff; font-size:18px; height:38px; border:none; cursor:pointer; border-radius:15px;
+background:#3498DB;
+margin-top:12px;
+margin-left:50px
+} 
+.login_content .aaa{margin-top:30px;float:right;font-size:13px;text-decoration: none}
+.login_content .aaa:hover{color:#3498DB;
+	transition:.5s all;
+	-webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all}
+
+.login_content ul p{height:18px;text-indent:42px;}
+.login_wrong{text-align:left;  width:90%; float:right; padding-top:10px; height:22px; font-size:14px}
+.remember_font{font-size: 12px}
+.language_select{width: 100%; float: left; height: 32px; margin-top:22px; font-size: 14px}
+.language_select *{vertical-align: middle;}
+.language_select label{cursor: pointer;}
+.language_select input{width: 22px; height: 22px;  }
+.login_wrong *{ vertical-align:middle}
+.login_wrong input{width:18px; height:18px;}
+.login_footer{width:100%; float:left; height:110px; background:#ededed; } 
+.login_footer span{float: right; padding-right: 20px; padding-top:10px; font-size: 12px}
+.login_footer .copyringStr{font-size: 14px;  }
+.login_footer .copyringStr a{color: #393939; text-decoration: none;}
+.login_footer .code_p{position: absolute; z-index: 10000; right: 70px; bottom: 32px; background: #fff; padding: 10px }
+.login_footer span div{background: #fff; padding: 10px; position: absolute; bottom: 65px;z-index: 1000;right: 0px; display: none}
+
+.buttonStyle{background:#39C; color:#fff; border:none; padding:4px 	2px 4px 12px; cursor:pointer}
+.login_footer font{padding-top:20px; color:#717171; float:left; width:auto; text-align:left; font-size:12px;padding-left:40px;}
+.wrong_username{width:90%; float:right; text-align:left; color:#F00; height:12px; font-size:13px}.wrong_password{width:90%; float:right; text-align:left; color:#F00; height:12px;font-size:13px}
+.login_faile{color:#F00; padding-left:20px;font-size:13px}
+.navigator{width: 100%; float: left;height: auto; background: #fff; position: absolute; border-bottom: 1px #ddd solid; display: none; left: 0}
+.navigator ul{width: 60%; margin:0 auto; padding: 20px; line-height: 150%}
+.navigator ul li  *{vertical-align: middle;}
+.navigator ul li img{border: 1px #ddd solid}
+.navigator span img{position: absolute; right: 10px; top: 10px;z-index: 100}
+
+#poptip { position: fixed; top:40%;left:50%;width:160px;margin-left:-80px;height: 27px;background:#000; opacity: 0.1;filter:alpha(opacity=0.1); color:#fff;z-index: 9999999;  border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;}
+	#poptip_content { position: fixed; top:40%;left:50%;width:220px;margin-left:-80px; height: 27px; color:#fff;text-align:center;font-size:14px;z-index: 9909; line-height: 2em; background: #000; border-radius: 6px}

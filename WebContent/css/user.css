@@ -1,0 +1,66 @@
+.wrapper{padding: 10px; margin: 0px}
+#project_tb {border-top:1px #ddd solid; border-right: 1px #ddd solid} 
+#project_tb td{border-bottom:1px #ddd solid; border-left: 1px #ddd solid; padding: 4px} 
+.sensorsTable{margin-top:10px; margin-bottom: 10px;}
+.sensorsTable td{border-bottom:1px #ddd solid; border-left: 1px #ddd solid;border-right: 1px #ddd solid;border-top: 1px #ddd solid; }
+
+.edit_pt_wraper{width:95%; margin:0 auto;}
+#edit_cont{width:100%; height:auto; margin-top:20px; }
+#edit_cont label{width:100%; float:left; padding:5px; margin:5px;  }
+#edit_cont label font{width:100px; text-align:right; float:left;}
+#edit_cont label input,select{width:280px; border:1px #ddd solid; height:32px; padding:2px; float:left; margin-left:5px }
+#edit_cont label button{padding:8px 82px 8px 82px;border:1px #ccc solid;  border-radius:4px; cursor:pointer; margin-left: 20px; background: #fff}
+#edit_cont label .sensor_checkbox{width:22px; height:22px; float:none }
+#edit_cont label *{vertical-align:middle;}
+.submit{width:100%; height:32px; padding-top:12px;}
+.submit button{width:220px; height:34px; border:1px #ccc solid; border-radius:4px; cursor:pointer }
+#edit_cont label.dataBtn{ text-align: center;}
+/*用户设置*/
+#setrole{width:100%; height:auto; float:left; margin-top:10px  }
+#setrole ul{width:100%; height:32px; border-bottom:1px #E8E8E8 solid; line-height:200%; float:left; padding-top:5px }
+#setrole ul li{float:left; width:32%;  }
+#setrole ul li *{vertical-align:middle;}
+#setrole ul .r1{width:20%; }#setrole ul .r2{width:55%;}#setrole ul .r3{width:25%}
+#setrole ul .r3 button{width:80px; background:url(../images/button_z.gif) repeat-x; border:1px #ccc solid; border-radius:4px; cursor:pointer; height:28px}
+#setrole ul .r3 img{cursor:pointer;}
+#setrole ul li .roleInput{width:220px; border:1px #E0E0E0 solid; border-radius:2px; padding:2px; height:28px}
+#setrole ul.setrole_tile{width:100%; height:32px; float:left; background:#dcf4f4; margin-top:20px; border:none; text-align:left;}
+#setrole ul.setrole_tile li{float:left; padding:4px 0px 4px 20px; font-weight:800;}
+#setrole ul.adduser li{width:16%; float:left; margin-top:12px}
+#setrole ul.adduser li.role_select{width:30%;}
+#setrole ul.adduser{width:100%; float:left; height:56px; }
+#setrole ul.adduser li input{  border:1px #E6E6E6 solid; padding:2px ; height:28px; width:180px }
+#setrole ul.adduser li.role_select input{width:22px; height:22px;}
+.account_ma_add{width:100%; float:left; margin-top:0px; text-align: right;  }
+
+#add_new_user{width:100%; float:left; display:none;}
+#add_new_user ul{width:100%; height:auto; float:left; }
+#add_new_user ul li{width:100%; float:left; margin-top:12px;  }
+#add_new_user .role_select *{vertical-align:middle;}
+#add_new_user .role_select input{width:24px; height:24px; }
+#add_new_user ul li label{width:20%; float:left;}
+
+#add_new_user ul li input.tx{ border:1px #ddd solid; border-radius:4px; height:32px; padding:2px; float:left; width:70% }
+#add_new_user ul.adduserBtn button{ width:120px; height:36px; padding-top:6px; text-align: center; border-radius:6px; cursor:pointer;  background:url(../images/button_z.gif) repeat-x; border:1px #ccc solid }
+#Edit_user{width:100%; float:left; height:auto; display:none}
+#Edit_user ul{width:100%; height:auto; float:left; }
+#Edit_user ul li{width:100%; float:left; margin-top:12px;  }
+#Edit_user ul li label{width:20%; float:left;}
+#Edit_user ul li input.tx{ border:1px #ddd solid; border-radius:4px; height:32px; padding:2px; float:left; width:70% }
+#Edit_user ul.adduserBtn button{ width:120px; height:36px; padding-top:6px; text-align: center; border-radius:6px; cursor:pointer;  background:url(../images/button_z.gif) repeat-x; border:1px #ccc solid }
+#Edit_user .role_select *{vertical-align:middle;}
+#Edit_user .role_select input{width:24px; height:24px; }
+
+ #user_show{width:100%; height:auto; float:left; margin:0 auto; }
+ #user_show ul.user_show_list_tile{width:100%; height:36px; padding-top:8px; border-bottom:1px #EBEBEB solid; margin-bottom:10px }
+ #user_show ul li{width:17%; float:left;text-align:left; padding:4px  }
+  #user_show ul li.Email_str{width: 15%}
+    #user_show ul li.Mobile_str{width: 15%}
+    #user_show .user_show{padding-bottom: 8px;margin-bottom:8px}
+ #user_show ul li.role_list{ width: 22%}
+ #user_show ul li.opera{width:8%; text-align:center}
+ #user_show ul li input{ border:1px #E8E8E8 solid; height:28px; padding:2px; border-radius:2px; width:140px }
+ #user_show ul li input[type='checkbox']{width:22px; height:22px;}
+ #user_show ul select {border:1px #ccc solid; height:32px; width:90%; }
+.profilesub{width:100%; float:left; margin-top:22px;}
+ .adduserBtn .add_user{ width:180px; padding:4px 12px 4px 12px; background:url(../images/button_z.gif) repeat-x; border:1px #ccc solid; border-radius:4px; height:32px; cursor:pointer }

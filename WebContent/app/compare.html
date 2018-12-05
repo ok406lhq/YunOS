@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/font-awesome.min.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/app.css" />
+
+ <script src="../js/jquery-1.11.0.min.js"></script>
+ <script src="../js/config.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/highstock.js"></script>
+  <script src="../js/lhgcalendar.min.js"></script>
+  <link href="../css/lhgcalendar.css" rel="stylesheet" type="text/css" />
+ <script src="../data/ptinfo.js"></script>
+ <script src="../data/comparedata.js"></script>
+</head>
+<body style="height: 560px">
+ <ol class="breadcrumb">
+    <li><a href="slope.html"><i class="fa fa-home"></i> &nbsp;首页</a></li>
+    <li><a href="#">数据分析</a></li>
+    <li class="active">数据对比</li>
+</ol>
+<div class="wrapper"  style="margin-top: -15px">
+	<div id="container" style="min-width: 310px; min-height: 420px; margin: 0 auto;clear:both"></div>
+	 
+	    <div class="panel panel-info">
+	     <div class="panel-heading">
+		   <ul style="width:100%">
+		     <label class='StartDate_str'> 起始时间：</label>:
+		     <input type='text' class='start_time notifc' id='project_Sname' readonly="readonly"  > 
+		     &nbsp;&nbsp;&nbsp;&nbsp;
+		     <label class='EndDate_str'> 结束时间</label>：
+		     <input type='text' class='end_time notifc' id='project_Sname' readonly="readonly"   > 
+
+		          <li style="float:right;"> <button onclick="movecheck()" class="btn btn-warning"><i class="fa fa-times-circle"></i> 清除</button>&nbsp;&nbsp;&nbsp;<button onClick="update_date()" class="btn btn-info"><i class="fa fa-refresh"></i> 更新 </button></li>
+		         </ul>
+		         </div>
+		    
+		        <ul class="update_ul">
+		         <li class="sensorlist"> </li>
+		        
+		        </ul>
+
+		        <ul class="alert alert-warning"> <li class="updateBtn" style="text-align:right;">
+		         <font color="#FF0000">*</font> <label class="maxsensors">Max. 2 sensors</label> 
+		         </li>
+		         </ul> 
+
+	         
+	 </div>
+	</div>
+</div>
+</body>
+</html>
+ <script src="../js/footer.js"></script>
+<script type="text/javascript">
+
+var PrjName="jlsz";
+var start_time=getUrlVars()["start_time"];
+var end_time=getUrlVars()["end_time"];
+	$(function(){
+		getPtinfo();
+	})
+var d = new Date();
+        var vYear = d.getFullYear();
+        var vMon = d.getMonth() + 1;
+       var vDay = d.getDate();
+	    vMon=vMon<10 ? "0" + vMon : vMon;
+	    vDay=vDay<10 ? "0"+ vDay : vDay;
+		 var vDate=vYear+"-"+vMon+"-"+vDay;
+		 
+		var Lastday= getLastDayOfMonth(vYear,vMon);
+		var lDay=vYear+"-"+vMon+"-"+Lastday;
+		var preWeek=date2str(vYear,vMon-1,vDay,"pre"); 
+		 if(!CheckValIsNull(start_time)){
+	        $(".start_time").val(preWeek);
+			start_time=preWeek;
+		 }else{
+			 $(".start_time").val(start_time);
+		 }
+
+		  if(!CheckValIsNull(end_time)){
+	      $(".end_time").val(curDateTime());
+		  end_time=curDateTime();
+		 }else{
+			 $(".end_time").val(end_time);
+		 }
+	 
+$(".start_time").calendar();
+ $(".end_time").calendar(); 
+function getPtinfo(){
+	
+	 var SprjName=$('.ProjectName', parent.document).val();
+         if(!CheckValIsNull(SprjName)){
+      SprjName="All";
+    }    
+
+	 var NewAjax=new wtyan();
+		var url="../data/queryptinfo.php";
+		NewAjax.data={"SensorName":"1","PrjName":PrjName,"platform":"web","SprjName":SprjName};
+		NewAjax.AjaxGet(url,handleData);
+		function handleData(data){
+		     
+			 var result =ptinfodatas; 
+
+			 var projectListArr=result.list; 
+			 var sensorStr="";
+			 if(projectListArr.length>0){
+				  $.each(projectListArr,function(index,project){
+					  var groupname=project.groupname;  //sensor
+					  var SensorName=project.SensorName;
+					  var StaName=project.StaName.toLowerCase(); 
+					  var sorName=SensorName.replace(/-/g, "_");  
+					  var TableName=StaName+"_"+sorName.toLowerCase(); ///查询表名
+					  var SensorType=project.SensorType;
+					  var checked;
+					  if(index<2){
+						  checked="checked";
+					  }
+					  sensorStr+="<div><input type='checkbox' value='"+TableName+"' id='"+index+"' "+checked+" title='"+SensorType+"' name='sensor' >"+
+					              " <label for='"+index+"'>"+groupname+"</label></div>";
+				  })
+				       
+				  $(".sensorlist").html(sensorStr);
+				    var sensorArr=[];
+                    var sensortypeArr=[];
+				     $("input[name='sensor']:checked").each(function(index, element) {
+                        sensorArr.push($(this).val());  
+						sensortypeArr.push($(this).attr('title'));
+                    });
+					 
+					  sensor_str=sensorArr.join(",");
+					 getData(start_time,end_time,sensorArr,sensortypeArr);
+					 
+			 }else{
+				 $(".sensorlist").html("No Sensor");
+			 }
+		}
+		NewAjax=null;
+		
+}
+
+
+function update_date(){
+	               var sensorArr=[];
+                   var sensortypeArr=[];
+				     $("input[name='sensor']:checked").each(function(index, element) {
+                        sensorArr.push($(this).val());  
+						sensortypeArr.push($(this).attr('title'));
+                    });
+				
+					if(sensorArr.length>4){
+						art.dialog.alert('Maximum sensor number: 4'); 
+						
+						return false;
+					}else if(sensorArr.length==0){
+						art.dialog.alert('At least choice one sensor!'); 
+						
+					}
+					var start_time=$(".start_time").val();
+					var end_time=$(".end_time").val();
+					 var datadiffuse=GetDateDiff(start_time,end_time,"day");
+				 if(datadiffuse<1){
+					art.dialog.alert('Time error, please re-input...'); 
+					return false;
+				 }
+				  
+				  sensor_str=sensorArr.join(",");
+
+				  getData(start_time,end_time,sensorArr,sensortypeArr);
+				 
+}
+
+
+  function getData(start_time,end_time,sensorArr,sensortypeArr){
+		   var sensor=sensorArr.join("|");
+          
+		   var sensortype=sensortypeArr.join("|");
+		   
+	  Highcharts.setOptions({
+          global: {  useUTC: false //关闭UTC
+}
+}) 	 		 
+				$.ajax({
+	 url:"../data/get_update_data.php",
+	  dataType:"json",  
+	  async:false,
+	  type:"POST",  
+	  timeout:3000, data:{"plat":"web","PrjName":PrjName,"start_time":start_time,"end_time":end_time,"sensor":sensor,"sensortype":sensortype},
+	 
+	  beforeSend:function(){
+
+		 if(IsPC()){
+
+		 	 DataLoading("正在查询数据，请稍后。。。。"); 
+		 }
+		
+	 }, 
+	 
+	 success: function(data) {
+				var data=updatedata;
+				var sbutitleStr=[];
+			    var datalist=data.list;
+
+				var adddateList=data.adddata;
+				var timeArr=[];
+				 for(var t=0;t<sensorArr.length;t++){
+				   
+				   		 if(sensorArr[t].indexOf("_")!=-1){
+                          subtiltle=sensorArr[t].split("_")[1].toUpperCase();
+				       	  }else{
+				       	  	 subtiltle=sensorArr[t].toUpperCase();
+				       	  }
+				       	  sbutitleStr.push(subtiltle);
+				   	
+
+				   }
+			     for(var p=0;p<adddateList.length;p++){
+					  
+					 timeArr.push(adddateList[p]);
+				 }
+				 var seriesArr=[]; 
+			    var k=0;
+			   for(i in datalist){
+				   var sorstr="";
+			       if(i.length>0){
+			       	
+			       	  if(i.indexOf("_")!=-1){
+                          sorstr=i.split("_")[1].toUpperCase();
+			       	  }else{
+			       	  	 sorstr=i.toUpperCase();
+			       	  }
+					 
+					  
+					   
+				   }
+				  
+		           
+				
+			 
+				if(datalist[i].length>0){
+				    
+				 
+				var PointArr=[];
+				  var t=0;
+				 
+				$.each(datalist[i],function(index,ListArr) {
+				  
+					var adddate=adddateList[index];
+					
+					if(adddate==null){
+						adddate=curDateTime();
+					}
+					var ad=adddate+":00:00";
+					 ad=ad.replace(/-/g, "/");
+					 var dateList= new   Date(Date.parse(ad));   
+				   
+					var getTimedate=dateList.getTime()+0*60*60*1000;
+					
+					//adddate=adddate.substr(0,adddate.lastIndexOf(":"));
+					PointArr[t]=[];
+					PointArr[t][0]=(getTimedate);
+					PointArr[t][1]=(ListArr);
+					 t++;
+				})
+                    
+		           var uffix="mm";
+		           switch(sensortypeArr[k]){
+		           	 case "agmd":
+		           	 uffix=" meter";
+		           	 break;
+		           	 case " GNSS":
+		           	  uffix=" mm";
+		           	 break;
+		           	  case "Prism":
+		           	  uffix=" mm";
+		           	 break;
+		           	  case "LRDM":
+		           	  uffix=" mm";
+		           	 break;
+		           	  case "Piezometer":
+		           	  uffix=" meter";
+		           	 break;
+		           	  case "RainGauge":
+		           	  uffix=" mm";
+		           	 break;
+		           	   case "LoadCell":
+		           	  uffix=" Kpa";
+		           	 break;
+		           }
+		           k++;
+				seriesArr.push({name:sorstr ,
+			      marker : {enabled : true,radius : 4},tooltip: {
+                valueSuffix: uffix
+            },
+                 data: PointArr})	
+			
+			  	}
+					
+				  
+				
+		          	}
+		     		
+			      sbutitle=sbutitleStr.join(",");
+				 var  senstr=sbutitleStr.join("|");
+				    var y_val="mm";
+				    if(regArr("Piezometerd",sensortypeArr)){
+						y_val="mm";
+					}
+					if(regArr("LoadCell",sensortypeArr)){
+						y_val="Kpa";
+					}
+					if(regArr("LRDM",sensortypeArr)){
+						y_val="mm";
+					}
+					if(regArr("agmd",sensortypeArr)){
+						y_val="meter";
+					}
+					charts(seriesArr,timeArr,sbutitle,y_val);
+
+
+					
+					
+					
+					if(IsPC())  DataLoadingHide();
+	      },error:function(){  
+		     if(IsPC())  DataLoadingHide();
+			   alert({ title: '',lock:true,content: 'system error', ok: function () { window.location.reload()}})
+		  }
+		  })
+		  
+		  
+		  
+	
+	  }
+		 
+
+function charts(seriesArr,timeArr,sbutitle,y_val){
+	 
+    $('#container').highcharts('StockChart',{
+        chart: {
+            zoomType: 'xy',
+        },
+        title: {
+            text:  "数据对照"
+        },
+        subtitle: {
+            text: sbutitle
+        },
+        xAxis: [{
+			tickPixelInterval: 50,
+            categories:timeArr,
+			type: 'datetime',
+			labels: {
+                rotation: 90,
+                align: 'bottom',
+                style: {
+                    fontSize: '12px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        },],
+		
+        yAxis: [{ // Primary yAxis
+		
+            labels: {
+                format: '{value} '+y_val,
+                style: {
+                    color: '#89A54E',left: '0px', 
+                }
+            },
+            title: {
+                text: '',
+                style: {
+                    color: '#89A54E'
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: '',
+                style: {
+                    color: '#4572A7'
+                }
+            },
+            labels: {
+                format: '{value} mm',
+                style: {
+                    color: '#4572A7'
+                }
+            },
+            opposite: false
+        }],
+        tooltip: {
+         xDateFormat: '%Y-%m-%d %H',valueDecimals: 2
+
+      },
+        legend: {
+            enabled:true,
+           
+            backgroundColor: '#FFFFFF',borderWidth:'1px'  
+        },
+		scrollbar: {
+  enabled: true,
+  },
+   rangeSelector: {
+	          enabled:false,
+                selected: 0,
+				 buttons: [{
+                type: 'hour',
+                count: 24,
+                text: 'hour'
+            },
+			
+			 {
+                type: 'all',
+                text: 'All'
+            }],
+			
+            },
+
+		navigator: {
+  enabled: true,
+                      xAxis: {
+                       type: 'datetime',                       
+                     labels: {
+                       formatter: function() {
+                      // var vDate=(this.value);
+                       
+                     //  return vDate;
+                        },
+                        align: 'center',
+                        
+                             }
+                           }
+  },
+		 credits: {
+                enabled: false
+            },
+        series:seriesArr
+		
+    });
+}
+
+function regArr(str,ar){
+	var p=0;
+	for(var i=0;i<ar.length;i++){
+        if(str==ar[i]){
+        	p+=1;
+        }
+	}
+	if(p>1){
+		return true;
+	}else{
+		return false;
+	}
+}
+function DataLoading(str){
+	
+$("body").append("<div class='loadalert' style='position: absolute;width:100%; height:100%; text-align:center;z-index:100000000000'><div style='margin-top:20%;   '><img src='images/loading.gif'><br><br>"+str+"</div></div>");
+var wd=$("body").width();
+var wh=$("body").height();
+var a_wd=$(".loadalert").width();
+var a_hd=$(".loadalert").height();
+
+$(".loadalert").css({"left":((wd-a_wd)/2)+"px","top":((wh-a_hd)/2)+"px"});
+
+}
+
+function DataLoadingHide(){
+	$("body").find(".loadalert").remove();
+	
+}
+</script>

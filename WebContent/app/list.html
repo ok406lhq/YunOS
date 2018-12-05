@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/font-awesome.min.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/app.css" />
+
+ <script src="../js/jquery-1.11.1.min.js"></script>
+  <script src="../js/config.js"></script>
+</head>
+<body>
+
+	 <ol class="breadcrumb">
+    <li><a href="slope.html"><i class="fa fa-home"></i> &nbsp;首页</a></li>
+    <li><a href="slope.html">边坡</a></li>
+    <li class="active">黄山边坡</li>
+</ol>
+
+     <div class="wrapper"  style="margin-top: -15px">
+         <div class="baseinfo">
+					    <table class="table table-bordered table-hover">
+						<caption>基本信息</caption>
+						
+						<tbody>
+							<tr>
+								<td class='p1'>项目名称：</td>
+								<td>益马高速</td>
+								
+							</tr>
+							<tr>
+								<td class='p1'>项目省份：</td>
+								<td>江苏</td>
+								
+							</tr>
+							<tr>
+								<td class='p1'>项目负责人：</td>
+								<td>李荣学</td>
+								
+							</tr>
+							<tr>
+								<td class='p1'>检测状态：</td>
+								<td><button type="button" class="btn btn-success btn-sm">正在进行</button></td>
+								
+							</tr>
+							<tr>
+								<td class='p1'>边坡名称：</td>
+								<td>浮丘山边坡K29+348 - K29+396</td>
+								
+							</tr>
+							<tr>
+								<td class='p1'>更新时间：</td>
+								<td>2017-06-09</td>
+								
+							</tr>
+						</tbody>
+					</table>
+         </div>
+         <div class="pro_img">
+         	 <ul><a href="detail.html"><img src="../images/up/p1.png"></a></ul>
+         	 <ul class="tgra"><button type="button" class="btn btn-info"><i class="fa fa-list-alt"></i> 综合图表</button></ul>
+         </div>
+         <!--表面位移监测 和深度位移监测 表数据-->
+         <div class="pro_data_table_list">
+		         	    <table class="table table-bordered table-hover surface">
+						<caption>表面位移监测</caption>
+						<thead>
+							<tr>
+								<th>测点名称</th>
+								<th>更新时间</th>
+								<th>X值，Y值，H值</th>
+								<th>状态</th>
+							</tr>
+						</thead>
+						  <tbody>
+						   
+								<tr>
+									<td><i class="fa fa-circle red"></i> 表面位移1</td>
+									<td>2017-02-01</td>
+									<td>X值:0.00001 Y值:0.000070 H值:0.000070</td>
+									<td><a href="detail.html?r=表面位移1"><button type="button" class="btn btn-success btn-sm">正常</button></a></td>
+								</tr>
+							</a>
+							<tr>
+								<td><i class="fa fa-circle red"></i> 表面位移2</td>
+								<td>2017-03-01</td>
+								<td>X值:0.00003 Y值:0.000070 H值:0.000050</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-circle red"></i> 表面位移3</td>
+								<td>2017-03-05</td>
+								<td>X值:0.00004 Y值:-0.000020 H值:0.000070</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+						 </tbody>
+		                 </table>
+
+		                 <table class="table table-bordered table-hover depth">
+						<caption>深度位移监测</caption>
+						<thead>
+							<tr>
+								<th>测点名称</th>
+								<th>更新时间</th>
+								<th>X值，Y值，H值</th>
+								<th>状态</th>
+							</tr>
+						</thead>
+						  <tbody>
+							<tr>
+								<td><i class="fa fa-circle violet"></i> 深度位移1</td>
+								<td>2017-02-01</td>
+								<td>X值:0.00001 Y值:0.000070 H值:0.000070</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-circle violet"></i> 深度位移2</td>
+								<td>2017-03-01</td>
+								<td>X值:0.00003 Y值:0.000070 H值:0.000050</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-circle violet"></i> 深度位移3</td>
+								<td>2017-03-05</td>
+								<td>X值:0.00004 Y值:-0.000020 H值:0.000070</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+						 </tbody>
+		                 </table>
+         </div>
+          <!--雨量监测 和预警监测 表数据-->
+         <div class="pro_data_table_list">
+                   <table class="table table-bordered table-hover rainfall">
+						<caption>雨量监测</caption>
+						<thead>
+							<tr>
+								<th>测点名称</th>
+								<th>更新时间</th>
+								<th>近一个小时雨量值</th>
+								<th>状态</th>
+							</tr>
+						</thead>
+						  <tbody>
+							<tr>
+								<td><i class="fa fa-circle yello"></i> 雨量监测1</td>
+								<td>2017-02-01</td>
+								<td>0.00146</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-circle yello"></i> 雨量监测2</td>
+								<td>2017-03-01</td>
+								<td>0.000346</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-circle yello"></i> 雨量监测3</td>
+								<td>2017-03-05</td>
+								<td>0.000144</td>
+								<td><button type="button" class="btn btn-success btn-sm">正常</button></td>
+							</tr>
+						 </tbody>
+		                 </table>
+
+                     <table class="table table-bordered table-hover warm">
+						<caption>预警监测</caption>
+						<thead>
+							<tr>
+								<th>类型</th>
+								<th>处理状况</th>
+								<th>报警时间</th>
+								
+							</tr>
+						</thead>
+						  <tbody>
+							<tr>
+								<td><i class="fa fa-circle warmning"></i></td>
+								<td>已处理</td>
+								<td>2017-02-12</td>
+								
+							</tr>
+							<tr>
+								<td><i class="fa fa-circle warmning"></i></td>
+								<td>已处理</td>
+								<td>2017-02-21</td>
+								
+							</tr>
+							<tr>
+								<td><i class="fa fa-square default"></i></td>
+								<td>已处理</td>
+								<td>2017-02-04</td>
+								
+							</tr>
+						 </tbody>
+		                 </table>
+
+         </div>
+         <!--雨量监测 和预警监测 表数据 结束-->
+     </div>
+
+
+</body>
+</html>
+ <script src="../js/footer.js"></script>

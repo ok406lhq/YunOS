@@ -1,0 +1,237 @@
+.wrapper{padding: 10px; margin: 0px}
+.prjstatus{width: 100%; float: left;overflow: hidden; height: 90px }
+.prjstatus ul{width: 118px; height: 74px;  color: #000; float: left; margin-right: 10px; border-radius: 8px;font-size: 15px }
+.prjstatus ul li{ text-align: center; margin-top:8px; }
+.prjstatus ul li p{font-size: 18px;font-weight: bold;}
+.prjstatus ul.normalstaus{background: #00b611}
+.prjstatus ul.yellostaus{background: #f7cb00}
+.prjstatus ul.redstaus{background: #f74600}
+.prjstatus ul.lightYellow{background: #f5fb58}
+.prjstatus ul.orangestaus{background: #f6ba40}
+.prjstatus ul.offlinestaus{background: #ccc}
+table.prj{margin-top: 20px; float: left;}
+table.prj td,th{text-align: center;}
+table.prj caption{background: #ececec; text-align: center;font-size: 16px;font-weight: bold;}
+
+
+
+/*项目基本信息页*/
+.baseinfo{float:left; padding-left: 10px;  }
+.baseinfo > table >caption{
+	/* background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#62c9e6), to(#27b2da));
+	background-image: -webkit-linear-gradient(top, #62c9e6 0%, #27b2da 100%); */
+	background: linear-gradient(180deg,#929aa5,#314358);
+	background-image: -moz-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -ms-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -o-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: linear-gradient(top, #62c9e6 0%, #27b2da 100%); 
+	text-align: center;font-size: 16px; font-weight: bold; color: #fff
+}
+.baseinfo table .p1{width: 35%; background: #f0f0f0}
+.pointdatalist{width: 100%; float: left; margin-top: 10px;}
+.pointdatalist .pro_data_table_list{width: 760px; float: left; margin-top: 10px}
+
+/* .pro_data_table_list .surface,.rainfall{width: 98%;float: left}
+.pro_data_table_list .depth{width: 49%; margin-left: 2%;float: left;}
+.pro_data_table_list  .warm{width: 40%; margin-left: 2%;float: left;} */
+.pro_data_table_list table caption{
+	/* background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#62c9e6), to(#27b2da));
+	background-image: -webkit-linear-gradient(top, #62c9e6 0%, #27b2da 100%); */
+	background: linear-gradient(180deg,#929aa5,#314358);
+	background-image: -moz-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -ms-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -o-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: linear-gradient(top, #62c9e6 0%, #27b2da 100%); 
+	text-align: center;font-size: 16px; font-weight: bold; color: #fff
+}
+.pro_data_table_list table td{text-align: center;}
+.pro_data_table_list table td i.red{color: #ee0000;font-size: 18px}
+.pro_data_table_list table td i.violet{color: #db3bac;font-size: 18px}
+.pro_data_table_list table td i.yello{color: #f8c100;font-size: 18px}
+.pro_data_table_list table td i.green{color: #00ce22;font-size: 18px}
+.pro_data_table_list table td i.blue{color: #03b2e4;font-size: 18px}
+.pro_data_table_list table td i.warmning{font-size: 24px; color: #ee0000}
+.pro_data_table_list table td i.default{font-size: 24px; color: #00cd27}
+.pro_data_table_list table td button{padding: 2px 8px 2px 8px}
+.pro_data_table_list table td .status{width: 54px;float: left;}
+.PrjInfo{width: 100%; float: left; height: auto;}
+
+.PrjInfo .pro_img{float: left; width: 760px; height: 430px; position:relative; }
+.PrjInfo .pro_img .proimageshw{width: 100%; float: left; height: 400px;overflow: hidden; position: relative; }
+.PrjInfo .pro_img .proimageshw img{width: 760px}
+.PrjInfo .pro_img .proimageshw .pointcoord{cursor:pointer;position:absolute;width:auto;z-index: 12; font-size: 24px; }
+.PrjInfo .pro_img .proimageshw .sensornamestr{background: #fff; padding: 0px 2px 0px 2px; color: #f10000; font-size: 12px; position: absolute;  z-index: 120; height: 16px; line-height: 1em}
+.pro_img .tgra{ text-align: center;  font-size: 10px; position: absolute;z-index: 100; right: -10px; /* top: -36px; */ width: auto; }
+.ico_v{width: 100%; float: left; text-align: center; margin-top: 6px; margin-bottom: 6px;}
+/*项目监测数据详细*/
+.param label{ float: left; padding: 0px 5px 0px 5px }
+.pointdata {width: 100%; float: left;}
+.pointdata button{margin-right: 10px;float: left;}
+ .starttime{width: 140px; border:1px #ddd solid; height: 34px; padding: 8px;float: left;}
+ .endtime{width: 140px; border:1px #ddd solid; height: 34px; padding: 8px;float: left;}
+.ambulance{font-size: 16px;}
+.datalist{width: 100%; float: left; margin-top: 5px}
+.datalist .param{width: 100%; float: left; margin-bottom: 10px; border-bottom: 1px #ddd solid; padding: 10px ;}
+.datalist .btn-group button{margin: 0px}
+.data_shw{width: 100%; float: left;}
+.datalist .param .filter{width: 20px; height: 20px;}
+
+.datalist .creatchartY{margin-right: 10px;}
+.datalist .creatchartY .isYlabel{float: left;}
+.datalist .creatchartY .isY{width: 26px; height: 26px; float: left; }
+.datalist .creatchartY .chartY{width: 50px; border-radius: 4px; border: 1px #ddd solid; height: 32px;  margin-left: 3px;  text-indent: 4px;float: left;}
+.datalist .creatchartY .savechartY{float: left; margin-left: 5px}
+.data_shw .sensorname_img{width: 15%; float: left;}
+.data_shw .sensorname_img img{width:230px;}
+.data_shw .dataimg{width: 95%; float: left; overflow: hidden; height: 265px }
+.data_shw .dataimg img{margin-top: 10px;height:250px;}
+.data_shw .sensorname_img .dataimg_up_btn{text-align: center; width: 100%; float: left; margin-left: 60px }
+
+.graphic{float: left; width: 85%}
+.data_shw .datatable{float: left;  width: 85%; display:none;}
+.data_shw .descript{width: 81%;float: left; display: none; padding-left: 2%}
+.nodata{padding-left:40%; padding-top:46px; margin-top: 54px;float: left;}
+.opration{float: right;}
+.sensornamelist{width: 120px; border:1px #ddd solid; height: 34px; padding: 8px;float: left; }
+.topBtn button{float: right; border: 1px #ccc solid; padding: 5px 15px 5px 15px; background: #fff}
+.topBtn button.active{background: #00cf58; color: #fff}
+/*弹框样式*/
+.imgzoom_pack{
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,.7);
+	display:none;z-index: 1000
+}
+.imgzoom_pack .imgzoom_x{
+	color:#666;
+	height:25px;
+	width:25px;
+	
+	
+	text-align:center;
+	position:absolute;
+	right:65px;
+	top:55px;
+	z-index:10000; font-size: 18px;
+	cursor:pointer; padding: 5px;  box-shadow: 0px 0px 8px #666; border-radius: 50%;
+}
+.imgzoom_pack .imgzoom_img{
+	width:60%;
+	height:100%;
+	position:absolute;
+	left:20%;
+	top:0;
+	overflow:hidden;
+}
+.imgzoom_pack .imgzoom_img img{
+	width:100%;
+	position:absolute;
+	top:50%;
+}
+
+
+/*数据分析kalman*/
+
+.form-group{width: 50%; float: left;}
+.form-group label,select{float: left;}
+.form-group label{width: 20%}
+.form-group select,input{width: 70%} 
+.formgroup{width: 100%;float: left;}
+.form-group input{float: left; width: 70%}
+.filterbtn{width: 100%;float: left;}
+
+#fitering{width:90%; margin:0 auto;  }
+.fitering_tile{width:100%; float:left; border-bottom:1px #E4E4E4 solid; padding-bottom:10px; text-align: left; }
+.fitering_tile li{margin-top:15px;}
+.filterList{width:100%; float:left; text-align:left; }
+.filterList li{margin-bottom:10px }
+.filterList input{width:280px; border:1px #D4D4D4 solid; height:32px; padding:2px; }
+.filterList li.SensorList{width:100%; list-style-type:none; float:left; margin-top:20px}
+.filterList li.r3{width:50%; float:left; list-style-type:none; margin-top:10px; }
+.filterList li label{width:140px; float:left; line-height: 200% }
+.filterList select{width:280px; height:32px; border:1px #D4D4D4 solid; }
+
+
+/*监测简报*/
+
+.brieing{margin-top: 0px; float: left; }
+.brieing  >caption{
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#62c9e6), to(#27b2da));
+	background-image: -webkit-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -moz-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -ms-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -o-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: linear-gradient(top, #62c9e6 0%, #27b2da 100%); 
+	text-align: center;font-size: 16px; font-weight: bold; color: #fff
+} 
+.brieing thead .rp{padding-bottom: 20px}
+.brieing {text-align: center;}
+.brieing td span.success{color: #666; font-size: 16px; background: none}
+.brieing td span.danger{color: #fd0000; font-size: 16px;background: none}
+/*报表管理*/
+.report_btn{width: 100%; float: left;}
+.report_from_nav{width: 68%;float: left; }
+.report_from_nav button{margin: 0px}
+.report_btn .create{width: 30%; float:left; text-align: right; }
+.report_btn .create button{margin-right: 5px}
+.reprot_pram{width: 100%;float: left; margin-top: 10px;  }
+.reprot_pram *{vertical-align:middle;}
+.reprot_pram label,select,input,button{float: left;}
+.reprot_pram_desc{float: right;}
+.reprot_pram_desc button{margin-right: 10px}
+.reprot_pram *{vertical-align: middle;}
+.reprot_pram select{width: 120px; border: 1px #ddd solid; height: 32px; padding: 2px;}
+.reprot_pram input{width: 140px; border: 1px #ddd solid; height: 32px; padding: 2px; text-indent: 10px; margin-left: 10px}
+.reprot_pram input[type='checkbox']{width: 20px; height: 20px;}
+.reprot_pram .report_create{margin-left: 20px}
+.reprot_table{width: 100%; float: left; margin-top: 20px;}
+.reprot_table td button{margin-right: 10px;}
+
+.instantReport_prama{width: 360px; margin:10px 20px 10px 20px; float: left; display:none; }
+.instantReport_prama p{padding: 0px; margin: 0px; margin-top: 5px}
+.instantReport_prama label,select{float: left;}
+
+.instantReport_prama select{width: 100%; border: 1px #ddd solid; height: 32px; text-indent: 10px; padding: 2px; margin-top: 10px;}
+.instantReport_prama  button.submit_instantReport_prama{margin-top:10px;}
+
+
+.timingReport_prama{width: 330px;   display:none; height: 320px; position:relative;  z-index: 100; background: 
+#fff;  }
+.timingReport_prama p{padding: 0px; margin: 0px; margin-top: 5px}
+.timingReport_prama label,select{float: left;} 
+
+.timingReport_prama input{position:relative;width: 100%; border: 1px #ddd solid; height: 34px; text-indent: 10px;  margin-top: 10px;}
+.timingReport_prama select{width: 100%; border: 1px #ddd solid; height: 34px; text-indent: 10px;  margin-top: 10px;}
+.timingReport_prama  button.submit_instantReport_prama{margin-top:10px;}
+/**/
+.warn_btn{width: 100%; float: left;margin-top: -10px; margin-bottom:10px;}
+.warn_prj{width: 100%;float: left; margin-top: 10px; }
+.warn_prj label,select,input,button{float: left;}
+.warn_prj input[type='text']{width: 140px; border: 1px #ddd solid; height: 32px; padding: 2px; text-indent: 10px}
+.warn_prj select{width: 120px; border: 1px #ddd solid; height: 32px; padding: 2px}
+.warinfo_parma{width: 100%; height: 46px; margin-bottom: 10px; background: #f0fafc; padding-top: 6px; text-indent: 10px}
+.warinfo_parma *{vertical-align: middle;}
+.warinfo_parma label{padding-top: 4px}
+.warinfo_parma label,button,select{float: left; margin-right: 10px}
+/* 新增样式  */
+.warinfo_parma .activeval,.warinfo_parma .structure_type,.warinfo_parma .structure_name{width: 90px; height: 32px; padding: 1px; border: 1px #ddd solid;float: left;}
+
+/*预警设置*/
+.warnigSet label{width: 85px; float: left; }
+.warnigSet select{width: 240px; float: left; border: 1px #ddd solid; border-radius: 4px; height: 32px; text-indent: 10px; padding: 2px; margin-right: 20px}
+
+.Wtext{width: 100%; border: 1px #ddd solid;}
+#example_table{width: 90%; padding-left: 5%}
+#example_table1{width: 90%; padding-left: 5%}
+.ico_img_switchover{
+	-webkit-filter: grayscale(1);filter: gray; filter: grayscale(1);
+}
+.ico_font_xian{
+	font:italic bold 10px;padding-right:10px; color:#00b611; font-weight: bold; 
+}
+.ico_font_switchover{
+	font:italic bold 10px;padding-right:10px; color:#D0D0D0; font-weight: bold;
+}

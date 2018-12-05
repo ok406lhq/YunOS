@@ -1,0 +1,40 @@
+#header{/* #48b2cd; */color: #fff; height: 52px;float: left;width: 100%;overflow: inherit;}
+#header .logo{width: 65%; float: left;}
+#header .navbar{width: 35%; float: left; }
+#header .btn-group{margin-top: 10px}
+
+#wrapper{width: 100%;  float: left;  }
+#sidebar{float: left; width:15%;height: auto;color: #fff; margin-top:10px;position: relative; }
+#content{float: left; width:85%;height: auto;}
+#sidebar ul.menulist{margin: 20px}
+#sidebar ul .secondsub{padding-left: 20px;}
+#sidebar ul.menulist .submenu{margin-top: 12px}
+#sidebar ul.menulist .submenu li{ text-indent: 10px; padding-top: 7px }
+#sidebar ul.menulist .submenu ul li{background: url(../images/treeline.png) no-repeat; text-indent:20px}
+#sidebar ul.menulist .submenu ul li.end{background: url(../images/treeline_end.png) no-repeat}
+#sidebar ul.menulist .submenu ul li.in{margin-left: 20px; background:none;text-indent: 25px; background: url(../images/treeline.png) no-repeat}
+#sidebar ul.menulist .submenu ul.sub{background: url(../images/line.png) repeat-y;}
+#sidebar ul.menulist .submenu ul .secondsub{background: url(../images/s_line.png) no-repeat;}
+#sidebar ul.menulist a{color: #ecf8ff}
+#sidebar ul.menulist a:active{font-weight: bold;}
+#sidebar ul.menulist a:visited{font-weight: bold;}
+
+#sidebar ul.menulist a span{font-weight: bold; font-size: 15px}
+#sidebar ul.menulist .number{background: #006faf}
+.hrefPointer{position: absolute;z-index:20; color:#fff;font-size:32px}
+.panMove{ position: absolute;z-index:1000000000; color:#fff; font-size:18px; top:360px; cursor:pointer;background:linear-gradient(180deg,#3e526b,#314358);padding:15px 4px 15px 2px; left: 15%; border-bottom-right-radius: 4px;border-top-right-radius: 4px}
+
+.logdata-menu{position: absolute;font-size:12px; z-index: 10000; right:40px; display: none;top:52px; width: 460px; height: auto; background:#fff;padding:8px; box-shadow:0px 0px 5px #666 }
+
+.logdata-menu li{width:100%; float:left; height:34p;margin-top:5px;border-bottom:1px #ddd solid ;padding:5px 0px 5px 0px}
+.logdata-menu li dd{margin:0px; padding:0px; float:left}
+.logdata-menu li dd.waring{width:25%; text-align: center;}
+.logdata-menu li dd.sensor{width:15%; text-align: center;}
+.logdata-menu li dd.type{width:12%; text-align: center;}
+.logdata-menu li dd.time{width:30%;  color:#999; text-align: center;}
+.logdata-menu li dd.prj{width:18%; text-align: center;}
+#right{float:left;z-index:1}
+.badge{background: #fff; color: #fe0202}
+.userinfo{position: absolute;z-index: 10000; padding: 10px; background: #fff; box-shadow: 0px 0px 5px #666;font-size: 12px; color: #666}
+.userinfo label{font-weight:100;color:#999; width:70px}
+

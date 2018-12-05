@@ -1,0 +1,15 @@
+/*预警设置*/
+
+.wrapper{padding: 10px; margin: 0px}
+.warnigSet label{float: left; }
+.warnigSet select{width: 240px; float: left; border: 1px #ddd solid; border-radius: 4px; height: 32px; text-indent: 10px; padding: 2px; margin-right: 20px}
+.warnigSet .warnigparma p{margin-top: 20px; float: left; }
+.Wtext{width: 100%; border: 1px #ddd solid;}
+.addwarnlisBtn{float: right; margin-top: -20px;}
+
+
+
+.emailset div{width: 100%; margin-top:5px; height: 32px;}
+.emailset div label{width: 100px; float:left;}
+.emailset div input{border: 1px #ddd solid; height: 28px; text-indent: 10px; width: 280px }
+.emailset div select{border: 1px #ddd solid; height: 28px; width: 120px}

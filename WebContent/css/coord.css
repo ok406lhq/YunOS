@@ -1,0 +1,59 @@
+.wrapper{padding: 10px; margin: 0px}
+.coodsconditions{width: 100%; float: left; text-align: left; margin-bottom: 5px; margin-top: 10px; }
+.coodsconditions ul{float:left }
+.coodsconditions font,label{float: left; margin-right: 5px}
+.coodsconditions input{width: 100px; border:1px #ddd solid; height: 28px; padding: 2px;float: left;margin-left: 10px; }
+.coodsconditions select{width: 120px; border:1px #ddd solid; height: 28px; padding: 2px;float: left;margin-left: 10px; }
+.coodsconditions button{float: left; margin-left: 10px; }
+.coodsconditions .senornode{width:65%;}
+.coodsconditions .imageformupload{width:35%; display: none; padding: 0px; margin: 0px}
+.coodsconditions .imageformupload .form-group{padding: 0px; margin: 0px}
+.imageformupload input{border:1px #ddd solid; width:100px; height:28px }
+ .coord_text{padding:5px; font-size:14px; font-weight:bold; color:#000; position:absolute; top: 0px;z-index: 120}
+ #pro_bg_img #imag1{cursor:pointer;position:absolute;  top:160px;width:auto;left:120px;z-index: 12;  background: #fff; padding: 7px;  box-shadow: 0px 0px 4px #666;color: #f10000; background:#fff; border-radius: 50%  }
+#pro_bg_img{width: 100%; float: left;  height: 640px;}
+
+#pro_bg_img #proimg{width: 760px; height: 400px; float:left; position: relative;z-index: 1; overflow: hidden; background:no-repeat;}
+.rulback{position: absolute; top:480px; left: 10px; z-index: 100}
+.inputedit{border:1px #ddd solid;  height: 26px; border-radius: 4px; padding: 2px;width: 100%}
+
+
+
+/*椤圭洰鍩烘湰淇℃伅椤�*/
+.baseinfo{width: 30%; float:left; padding-left: 10px;  }
+.baseinfo > table >caption{
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#62c9e6), to(#27b2da));
+	background-image: -webkit-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -moz-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -ms-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -o-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: linear-gradient(top, #62c9e6 0%, #27b2da 100%); 
+	text-align: center;font-size: 16px; font-weight: bold; color: #fff
+}
+.baseinfo table .p1{width: 35%; background: #f0f0f0}
+.pointdatalist{width: 100%; float: left; margin-top: 10px;}
+.pointdatalist .pro_data_table_list{width: 50%; float: left; margin-top: 10px}
+
+.pro_data_table_list .surface,.rainfall{width: 98%;float: left}
+.pro_data_table_list .depth{width: 49%; margin-left: 2%;float: left;}
+.pro_data_table_list  .warm{width: 40%; margin-left: 2%;float: left;}
+.pro_data_table_list table caption{
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#62c9e6), to(#27b2da));
+	background-image: -webkit-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -moz-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -ms-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: -o-linear-gradient(top, #62c9e6 0%, #27b2da 100%);
+	background-image: linear-gradient(top, #62c9e6 0%, #27b2da 100%); 
+	text-align: center;font-size: 16px; font-weight: bold; color: #fff
+}
+
+.PrjInfo{width: 100%; float: left; height: auto;}
+.PrjInfo .starttime{border:1px #ddd solid; padding: 4px;border-radius: 4px;}
+.PrjInfo .endtime{border:1px #ddd solid; padding: 4px;border-radius: 4px;}
+.PrjInfo .pro_img{float: left; width: 760px; height: 420px; position:relative; }
+.PrjInfo .pro_img .proimageshw{width: 100%; float: left; height: 400px;overflow: hidden; position: relative; }
+.PrjInfo .pro_img .proimageshw img{width: 760px}
+.PrjInfo .pro_img .proimageshw .pointcoord{cursor:pointer;position:absolute;width:auto;z-index: 12; font-size: 24px; }
+.PrjInfo .pro_img .proimageshw .sensornamestr{background: #fff; padding: 0px 2px 0px 2px; color: #f10000; font-size: 12px; position: absolute;  z-index: 120; height: 16px; line-height: 1em}
+.pro_img .tgra{ text-align: center;  font-size: 16px; position: absolute;z-index: 100; right: -10px; top: -36px; width: auto; }
+.ico_v{width: 100%; float: left; text-align: center; margin-top: 6px}

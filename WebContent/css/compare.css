@@ -1,0 +1,17 @@
+/*数据对比*/
+.mlr-20{margin: 0 20px;}
+.mb-10{margin-bottom: 10px;}
+.layui-form{font-size: 12px;}
+.layui-btn{font-size: 12px;}
+.layui-form .layui-input{height: 30px;line-height: 30px;}
+.layui-form .layui-btn{height: 28px;line-height: 28px;}
+.layui-inline{margin-bottom: 5px;}
+
+.breadcrumb a{
+    color: #337ab7;
+    text-decoration: none;
+}
+.breadcrumb a:focus, .breadcrumb a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}

@@ -1,0 +1,37 @@
+<c3p0-config>
+	<!-- 命名的配置 Example -->
+	<named-config name="dbsimp">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		
+		<!-- 开发环境库 -->
+		
+		<!-- <property name="jdbcUrl">jdbc:mysql://58.20.17.214:3306/bdmpdb_dev?useUnicode=true&amp;charactorEncoding=utf8;
+		</property> --> 
+		
+		 
+		<!-- 临时演示测试环境库（同步生产数据） -->
+		<!-- <property name="jdbcUrl">jdbc:mysql://58.20.17.214:3306/bdmpdb_test?useUnicode=true&amp;charactorEncoding=utf8;
+		</property>  -->
+		 
+		<!-- 测试环境库 -->
+		 
+		<!-- <property name="jdbcUrl">jdbc:mysql://58.20.17.214:8066/BDMPDB?useUnicode=true&amp;charactorEncoding=utf8;
+		</property> --> 
+		
+		
+		 <!-- <property name="jdbcUrl">jdbc:mysql://172.20.39.16:8066/anchor?useUnicode=true&amp;charactorEncoding=utf8;  -->
+		 <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/anchor?useUnicode=true&amp;charactorEncoding=utf8;
+		</property> 
+		
+		
+		<!-- 如果池中数据连接不够时一次增长多少个 -->
+		<property name="user">anchor</property>
+		<property name="password">anchor</property>
+		<property name="acquireIncrement">5</property>
+		<property name="initialPoolSize">20</property>
+		<property name="minPoolSize">10</property>
+		<property name="maxPoolSize">40</property>
+		<property name="maxStatements">0</property>
+		<property name="maxStatementsPerConnection">5</property>
+	</named-config>
+</c3p0-config> 
